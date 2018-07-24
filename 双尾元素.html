@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.father {
+			width: 500px;
+			background-color: red;
+			/* height: 200px; */
+		}
+		.son {
+			width: 200px;
+			height: 50px;
+			background-color: pink;
+			border: 1px solid yellow;
+			float:left;
+		}
+		.mother {
+			width: 500px;
+			height: 400px;
+			background-color: green;
+		}
+/* 		.clear {
+			clear: both;
+		} */
+		/* 额外标签 */
+/* 		.clearfix:after {
+			content: "";
+			clear: both;
+			display: block;
+			触发了bfc机制
+			height: 0;
+			visibility: hidden;
+			/* 元素可见性 */
+				
+	/* 	} */ 
+	.clearfix:before,
+	.clearfix:after {
+		content: "";
+		display: table;
+	}
+	.clearfix:after {
+		clear: both;
+	}
+		.clearfix {
+			*zoom: 1;
+			/* 兼容低版本浏览器 */
+		}
+	</style>
+</head>
+<body>
+	<div class="father clearfix">
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="clear"></div>
+	</div>
+	<div class=mother></div>
+</body>
+</html>
